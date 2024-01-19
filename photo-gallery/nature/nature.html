@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Gallery</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+<body>
+    <h2 class="head"><a href="../photogallery.html">HOME</a></h2>
+    <div class="main">
+        <div class="container">
+            <h1>Nature Gallery</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="images">
+        <div class="img">
+            <img src="nature1.jpeg">
+            <div class="block-text">
+                <p>Image 1</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature2.jpeg">
+            <div class="block-text">
+                <p>Image 2</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature3.jpeg">
+            <div class="block-text">
+                <p>Image 3</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature4.jpeg">
+            <div class="block-text">
+                <p>Image 4</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature5.jpeg">
+            <div class="block-text">
+                <p>Image 5</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature6.jpeg">
+            <div class="block-text">
+                <p>Image 6</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature7.jpeg">
+            <div class="block-text">
+                <p>Image 7</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="nature8.jpeg">
+            <div class="block-text">
+                <p>Image 8</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="nature1.jpeg">
+    </div>
+    <script>      
+    document.querySelectorAll('.images img').forEach(image => {
+        image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+
+    document.querySelector('.popup-image span').onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+
+    }
+    </script>
+</body>
+</html>

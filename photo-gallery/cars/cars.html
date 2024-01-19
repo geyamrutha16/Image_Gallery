@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Gallery</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h2 class="head"><a href="../photogallery.html">HOME</a></h2>
+    <div class="main">
+        <div class="container">
+            <h1>Cars Gallery</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="images">
+        <div class="img">
+            <img src="cars1.jpeg">
+            <div class="block-text">
+                <p>Image 1</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="cars2.jpeg">
+            <div class="block-text">
+                <p>Image 2</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="cars3.jpeg">
+            <div class="block-text">
+                <p>Image 3</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="cars4.jpeg">
+            <div class="block-text">
+                <p>Image 4</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="cars5.jpeg">
+            <div class="block-text">
+                <p>Image 5</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="cars6.jpeg">
+            <div class="block-text">
+                <p>Image 6</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="cars1.jpeg">
+    </div>
+    <script>
+    document.querySelectorAll('.images img').forEach(image => {
+        image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+
+    document.querySelector('.popup-image span').onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+
+    }
+    </script>
+</body>
+</html>
